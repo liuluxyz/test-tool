@@ -18,7 +18,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Text;
 
 import com.sun.org.apache.xml.internal.serialize.OutputFormat;
-import com.sun.xml.internal.stream.XMLOutputFactoryImpl;
+//import com.sun.xml.internal.stream.XMLOutputFactoryImpl;
 //import com.sun.xml.internal.txw2.output.XMLWriter;
 import org.dom4j.io.XMLWriter;
 

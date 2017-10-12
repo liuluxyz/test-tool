@@ -26,6 +26,12 @@
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-mapreduce-client-core</artifactId>
       <version>2.8.1</version>
+      <exclusions>  
+           <exclusion>      
+                <groupId>jdk.tools</groupId>          
+                <artifactId>jdk.tools</artifactId>  
+           </exclusion>  
+     </exclusions>  
 	</dependency>
 	<dependency>
       <groupId>org.jrobin</groupId>
@@ -83,6 +89,34 @@
 	  <scope>system</scope>  
 	  <systemPath>${project.basedir}/lib/bmr/hadoop-common-2.7.1.jar</systemPath>  
 	</dependency>
+	<dependency>  
+      <groupId>tgsql</groupId>  
+	  <artifactId>gsp</artifactId>  
+	  <version>1.0</version>  
+	  <scope>system</scope>  
+	  <systemPath>${project.basedir}/lib/TGSqlParser/gsp.jar</systemPath>  
+	</dependency>
+	<dependency>  
+      <groupId>tgsql</groupId>  
+	  <artifactId>GeneralSQLParser</artifactId>  
+	  <version>1.0</version>  
+	  <scope>system</scope>  
+	  <systemPath>${project.basedir}/lib/TGSqlParser/GeneralSQLParser.jar</systemPath>  
+	</dependency>
+	<dependency>  
+      <groupId>zql</groupId>  
+	  <artifactId>zql</artifactId>  
+	  <version>0.0.4</version>  
+	  <scope>system</scope>  
+	  <systemPath>${project.basedir}/lib/zql/zql-0.0.4.jar</systemPath>  
+	</dependency>
+	<dependency>  
+      <groupId>ssh</groupId>  
+	  <artifactId>sshxcute</artifactId>  
+	  <version>1.0</version>  
+	  <scope>system</scope>  
+	  <systemPath>${project.basedir}/lib/ssh/sshxcute-1.0.jar</systemPath>  
+	</dependency>
     <dependency>
       <groupId>net.sf.json-lib</groupId>
       <artifactId>json-lib</artifactId>
@@ -111,7 +145,6 @@
     	<version>2.4</version>
     	<classifier>jdk15</classifier>
 	</dependency>
-  
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

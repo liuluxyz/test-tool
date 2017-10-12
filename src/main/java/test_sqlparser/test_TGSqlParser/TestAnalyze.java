@@ -79,7 +79,7 @@ public class TestAnalyze {
 							(join.getTable().getAliasClause() != null) ? join.getTable().getAliasClause().toString() : "");
 					for (int j = 0; j < join.getJoinItems().size(); j++) {
 						TJoinItem joinItem = join.getJoinItems().getJoinItem(j);
-						System.out.printf("Join type: %s\n", joinItem.getJoinType().toString());
+						System.out.printf("Join type: %s\n", joinItem.getJoinType());
 						System.out.printf("table: %s, alias: %s\n", joinItem.getTable().toString(), 
 								(joinItem.getTable().getAliasClause() != null) ? joinItem.getTable().getAliasClause().toString() : "");
 						if (joinItem.getOnCondition() != null) {
@@ -95,7 +95,7 @@ public class TestAnalyze {
 							(source_join.getTable().getAliasClause() != null) ? source_join.getTable().getAliasClause().toString() : "");
 					for (int j = 0; j < source_join.getJoinItems().size(); j++) {
 						TJoinItem joinItem = source_join.getJoinItems().getJoinItem(j);
-						System.out.printf("source_join type: %s\n", joinItem.getJoinType().toString());
+						System.out.printf("source_join type: %s\n", joinItem.getJoinType());
 						System.out.printf("table: %s, alias: %s\n", joinItem.getTable().toString(), 
 								(joinItem.getTable().getAliasClause() != null) ? joinItem.getTable().getAliasClause().toString() : "");
 						if (joinItem.getOnCondition() != null) {
@@ -106,7 +106,7 @@ public class TestAnalyze {
 					}
 					for (int j = 0; j < join.getJoinItems().size(); j++) {
 						TJoinItem joinItem = join.getJoinItems().getJoinItem(j);
-						System.out.printf("Join type: %s\n", joinItem.getJoinType().toString());
+						System.out.printf("Join type: %s\n", joinItem.getJoinType());
 						System.out.printf("table: %s, alias: %s\n", joinItem.getTable().toString(), 
 								(joinItem.getTable().getAliasClause() != null) ? joinItem.getTable().getAliasClause().toString() : "");
 						if (joinItem.getOnCondition() != null) {

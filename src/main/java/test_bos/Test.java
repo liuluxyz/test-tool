@@ -14,8 +14,8 @@ import com.baidubce.services.bos.model.PutObjectResponse;
 
 public class Test {
 
-	private String ak = "6f5b3bf04469446f91a6a885c370b66d";
-	private String sk = "f5a9af94b7fb48bb9189bdbe2f624830";
+	private String ak = "0b3d4fe924874bbeb0462c3d1cf8f6bc";
+	private String sk = "46f02a52985f457da07d3e6182ca77e9";
 	private BosClient client = null;
 	
 	private void initBosClient(){
@@ -48,21 +48,40 @@ public class Test {
 	}
 	
 	private void delete() {
+		
+		/**
+		 * 备忘：
+		 * 1. 删除的目标不存在时，抛异常
+		 * 2. key无法使用*.txt之类的匹配
+		 * 3. key的最前面可以有/，也可以没有
+		 * 4. 
+		 */
+//		client.deleteObject("production-datas", "sdf/wuzhou/bohrsoft/b.txt");
+		
+		ListObjectsResponse objs = this.client.listObjects("production-datas", "sdf/wuzhou/bohrsofts");
+		System.out.println(objs.getContents().size());
+		for(BosObjectSummary obj : objs.getContents()){
+			System.out.println(obj.getKey());
+			System.out.println(obj.toString());
+		}
+		
+		
 //		String filePre = "/" + groupData.getClientCode() + "/" + groupData.getChannel() + "/" + groupData.getInterfaceName() + "/" + groupData.getDt();
 //		String fileName = filePre + "/" + dateFormat.format(new Date()) + ".parquet";
    	
-		String filePre = "/wuzhou/shenma/creative_report/2017-05-31";
+//		String filePre = "/wuzhou/shenma/creative_report/2017-05-31";
 //		BosObject bosObj = this.client.getObject("clm-sdf", filePre);
 //		System.out.println(bosObj.getKey());
 //		System.out.println(bosObj.toString());
 //		System.out.println(bosObj.getObjectMetadata());
 		
-		ListObjectsResponse objs = this.client.listObjects("clm-sdf", "wuzhou/shenma/creative_report/2017-05-31");
-		System.out.println(objs.getContents().size());
-		for(BosObjectSummary obj : objs.getContents()){
+		
+//		ListObjectsResponse objs = this.client.listObjects("clm-sdf", "wuzhou/shenma/creative_report/2017-05-31");
+//		System.out.println(objs.getContents().size());
+//		for(BosObjectSummary obj : objs.getContents()){
 //			System.out.println(obj.getKey());
-			System.out.println(obj.toString());
-		}
+//			System.out.println(obj.toString());
+//		}
 		
 //		this.client.deleteObject("clm-sdf", filePre);
 		
@@ -78,7 +97,7 @@ public class Test {
 		Test test = new Test();
 		test.initBosClient();
 		
-		test.append();
+		test.delete();
 		
 	}
 

@@ -9,9 +9,6 @@ import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
-//import net.sf.json.JSONObject;
-
-
 public class TestJson {
 
 	public static void fromEnum(){
@@ -97,15 +94,16 @@ public class TestJson {
 	/**
 	 * @param args
 	 * 下午8:48:00
+	 * @throws JSONException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws JSONException {
 		// TODO Auto-generated method stub
 
 //		from();
 		
 //		testJsonAccumulate();
 		
-		testContains();
+		testJsonArray();
 		
 //		String a = "{A:[0,1,2,3,4,5,6,7,8,9]}";
 //		try {

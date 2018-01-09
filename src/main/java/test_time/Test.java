@@ -8,6 +8,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Random;
+import java.util.TimeZone;
 
 import org.apache.commons.lang.time.DateUtils;
 
@@ -15,7 +16,7 @@ public class Test {
 
 	private static void testCalendar2(){
 		Calendar calendar = Calendar.getInstance();
-		calendar.setTimeInMillis(System.currentTimeMillis());
+		calendar.setTimeInMillis(1512112026699l);
 		
 		System.out.println(calendar.getTime().toLocaleString());
 		
@@ -28,6 +29,11 @@ public class Test {
 	private static void testCalendar(){
 		Calendar calendar = Calendar.getInstance();
 		System.out.println(calendar.getTime().toLocaleString());
+		System.out.println(calendar.get(Calendar.HOUR_OF_DAY));
+		
+		DateUtils.addDays(calendar.getTime(), -1);
+		System.out.println(calendar.getTime().toLocaleString());
+		
 		
 		calendar.setTimeInMillis(1398931037762L);
 		
@@ -102,8 +108,17 @@ public class Test {
 	
 	private static void showTime(){
 	
-		System.out.println(new Date(1446131905 * 1000L).toLocaleString());
-									
+//		System.out.println(new Date(1515056479261L).toLocaleString());
+
+		SimpleDateFormat TIMEFORMATTER = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		System.out.println(TIMEFORMATTER.format(new Date()));
+		
+		String a = TIMEFORMATTER.format(new Date(1515056778796L));
+		System.out.println(a);
+		
+		TIMEFORMATTER.setTimeZone(TimeZone.getTimeZone("GMT"));
+		a = TIMEFORMATTER.format(new Date(1515056778796L));
+		System.out.println(a);
 	}
 	
 	
@@ -151,9 +166,9 @@ public class Test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-//		showTime();
+		showTime();
 		
-		testCalendar();
+//		testCalendar2();
 		
 //		testTimestamp();
 		

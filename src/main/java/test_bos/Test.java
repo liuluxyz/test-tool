@@ -16,6 +16,7 @@ public class Test {
 
 	private String ak = "0b3d4fe924874bbeb0462c3d1cf8f6bc";
 	private String sk = "46f02a52985f457da07d3e6182ca77e9";
+			
 	private BosClient client = null;
 	
 	private void initBosClient(){
@@ -91,13 +92,31 @@ public class Test {
    	
 	}	
 	
+	private void getAndDelete() {
+
+//		BosObject bosObj = this.client.getObject("clm-test", "test/aaaab.txt");
+//		System.out.println(bosObj == null);
+//		System.out.println(bosObj.getKey());
+//		System.out.println(bosObj.toString());
+//		System.out.println(bosObj.getObjectMetadata());
+		
+		
+		
+		this.client.deleteObject("clm-test", "test/aaaab.txt");
+		
+	}	
+
+	public void write(){
+		
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		Test test = new Test();
 		test.initBosClient();
 		
-		test.delete();
+		test.getAndDelete();
 		
 	}
 

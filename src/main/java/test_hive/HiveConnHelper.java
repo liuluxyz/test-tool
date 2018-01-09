@@ -20,10 +20,11 @@ public class HiveConnHelper {
 //	private static final String url = "jdbc:hive://10.1.253.179:11000/default";
 	
 	private static final String driver = "org.apache.hive.jdbc.HiveDriver";
-	private static final String url = "jdbc:hive2://192.168.0.156:8702/default";
+//	private static final String url = "jdbc:hive2://192.168.0.156:8702/default";
+	private static final String url = "jdbc:hive2://180.76.148.212:10000/default;auth=noSasl";
 //	private static final String url = "jdbc:hive2://10.1.253.155:10008/default?auth=ocetl";
 	
-	private static final String user = "";
+	private static final String user = "hive";
 	private static final String password = "";
 	
 	private static HiveConnHelper hiveConnHelper;

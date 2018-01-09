@@ -17,7 +17,6 @@ public class Test {
 	
 	public static void testDelete(){
 		Map<Integer, String> a = new HashMap<Integer, String>();
-		
 		a.put(1, "a");
 		a.put(2, "b");
 		a.put(3, "c");
@@ -26,10 +25,10 @@ public class Test {
 		
 		Iterator<Integer> it = a.keySet().iterator();
 		while(it.hasNext()){
-			
 			int key = it.next();
 			if(key == 3){
 				it.remove();
+//				a.remove(3);
 			}
 		}
 		System.out.println(a);
@@ -58,6 +57,14 @@ public class Test {
 		}
 	}
 	
+	private static void testToString(){
+		Map<String, String> m = new HashMap<String, String>();
+		for(int i=0; i<10; i++){
+			m.put(i+"", i+"");
+		}
+		System.out.println(m.toString());
+	}
+
 	public static void testContains(){
 		Map<Integer, String> a = new HashMap<Integer, String>();
 		
@@ -100,7 +107,7 @@ public class Test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		testNull();
+		testToString();
 		
 		
 //		testMuliKey();

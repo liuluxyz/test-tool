@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<DataSources>
+  <DataSource dbName="">
+    <Driver/>
+    <URL/>
+    <UserName/>
+    <PassWord/>
+    <maxIdle/>
+    <maxActive/>
+    <maxWait/>
+  </DataSource>
+  <DataSource dbName="">
+    <Driver/>
+    <URL/>
+    <UserName/>
+    <PassWord/>
+    <maxIdle/>
+    <maxActive/>
+    <maxWait/>
+  </DataSource>
+  <DataSource dbName="">
+    <Driver/>
+    <URL/>
+    <UserName/>
+    <PassWord/>
+    <maxIdle/>
+    <maxActive/>
+    <maxWait/>
+  </DataSource>
+  <DataSource dbName="">
+    <Driver/>
+    <URL/>
+    <UserName/>
+    <PassWord/>
+    <maxIdle/>
+    <maxActive/>
+    <maxWait/>
+  </DataSource>
+  <DataSource dbName="">
+    <Driver/>
+    <URL/>
+    <UserName/>
+    <PassWord/>
+    <maxIdle/>
+    <maxActive/>
+    <maxWait/>
+  </DataSource>
+  <DataSource dbName="">
+    <Driver/>
+    <URL/>
+    <UserName/>
+    <PassWord/>
+    <maxIdle/>
+    <maxActive/>
+    <maxWait/>
+  </DataSource>
+  <DataSource dbName="">
+    <Driver/>
+    <URL/>
+    <UserName/>
+    <PassWord/>
+    <maxIdle/>
+    <maxActive/>
+    <maxWait/>
+  </DataSource>
+  <DataSource dbName="">
+    <Driver/>
+    <URL/>
+    <UserName/>
+    <PassWord/>
+    <maxIdle/>
+    <maxActive/>
+    <maxWait/>
+  </DataSource>
+  <DataSource dbName="">
+    <Driver/>
+    <URL/>
+    <UserName/>
+    <PassWord/>
+    <maxIdle/>
+    <maxActive/>
+    <maxWait/>
+  </DataSource>
+  <DataSource dbName="">
+    <Driver/>
+    <URL/>
+    <UserName/>
+    <PassWord/>
+    <maxIdle/>
+    <maxActive/>
+    <maxWait/>
+  </DataSource>
+</DataSources>
